@@ -1,0 +1,30 @@
+{
+  "name": "full-blog-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --watch --env-file=.env server.js",
+    "dev": "node server.js",
+    "app": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Monayem Hossain Limon",
+  "license": "ISC",
+  "description": "This is blog project where will create api and api endpoints, authentication using jwt, set cookies, validation proccess, database as a MongoDB also gain better idea about reusable code and cleaner code.",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http-errors": "^2.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
