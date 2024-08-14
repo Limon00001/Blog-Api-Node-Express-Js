@@ -12,7 +12,11 @@ const isAdmin = (req, res, next) => {
         if (role === 'admin') {
             next();
         } else {
-            return res.status(403).json({ message: 'Only admin can access this.' });
+            return res.status(403).json({
+                error: {
+                    message: 'You don\'t have permission to access this.'
+                }
+            });
         }
     } catch (error) {
         next(createError(403, 'Sorry. You are not able to access this.'));

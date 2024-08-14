@@ -1,7 +1,7 @@
 /*
     Author: Monayem Hossain Limon
     Project: A Blog Site
-    Description: This is blog project where will create api and api endpoints, authentication using jwt, set cookies, validation proccess, database as a MongoDB also gain better idea about reusable code and cleaner code.
+    Description: This is blog project where will create api and api endpoints, authentication using jwt, set cookies, validation process, database as a MongoDB also gain better idea about reusable code and cleaner code.
     Date: 2024-08-02
 */
 
@@ -16,6 +16,7 @@ const path = require('path');
 const { notFound, defaultError } = require('./middlewares/errors/error.handler');
 const dbConfig = require('./config/dbConfig');
 const userRouter = require('./routes/users/users.routes');
+const categoryRouter = require('./routes/categories/categories.routes');
 
 // Instance Variables
 const app = express();
@@ -37,6 +38,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // Routes
 app.use('/api/v1/users', userRouter)
+app.use('/api/v1/categories', categoryRouter)
 
 
 // Error Handling
